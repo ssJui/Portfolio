@@ -11,7 +11,6 @@ background:#f8fafc;
 color:#111;
 }
 
-/* BLUR BACKGROUND */
 .bg-blur::before,
 .bg-blur::after{
 content:"";
@@ -35,7 +34,6 @@ bottom:10%;
 right:10%;
 }
 
-/* NAVBAR */
 .navbar{
 position:fixed;
 top:0;
@@ -64,13 +62,13 @@ border-radius:24px;
 font-weight:500;
 cursor:pointer;
 transition:.3s;
+text-decoration: none;
 }
 
 .resume-btn:hover{
 background:#0284c7;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -96,7 +94,6 @@ background:#0284c7;
   color: #111827;
 }
 
-/* SECTION */
 .section{
 min-height:100vh;
 display:flex;
@@ -110,7 +107,6 @@ max-width:1200px;
 width:100%;
 }
 
-/* HERO */
 .center-title{
 text-align:center;
 }
@@ -124,7 +120,6 @@ font-size:40px;
 margin-top:20px;
 }
 
-/* SCROLL DOWN BUTTON */
 .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -177,7 +172,6 @@ margin-top:20px;
   }
 }
 
-/* ABOUT */
 .two-col{
 display:flex;
 align-items:center;
@@ -223,7 +217,6 @@ width:300px;
 border-radius:50%;
 }
 
-/* BUTTONS */
 .buttons{
 margin:20px 0;
 }
@@ -246,8 +239,8 @@ border:1px solid #0ea5e9;
 background:transparent;
 padding:9px 22px;
 border-radius:20px;
-text-decoration:none;   /* REMOVE UNDERLINE */
-color:#0ea5e9;          /* THEME COLOR */
+text-decoration:none;   
+color:#0ea5e9;          
 font-weight:500;
 display:inline-block;
 transition:.3s;
@@ -260,7 +253,7 @@ color:white;
 
 .ghost a{
   text-decoration: none;
-  color: inherit;   /* button er color use korbe */
+  color: inherit;   
 }
 
 .social a{
@@ -283,7 +276,6 @@ color:white;
   color:white;
 }
 
-/* SERVICES */
 .subtitle{
 text-align:center;
 color:#0ea5e9;
@@ -315,23 +307,16 @@ transition:.3s;
 transform:translateY(-6px);
 }
 
-/* ===== MORE ABOUT SECTION ===== */
-
 .more-about-section{
-background:transparent; /* same as projects */
+background:transparent; 
 }
-
-/* Layout */
 
 .more-about-container{
 display:grid;
-grid-template-columns: 1.3fr 0.7fr; /* left bigger */
+grid-template-columns: 1.3fr 0.7fr; 
 gap:80px;
 align-items:center;
 }
-
-
-/* ===== EDUCATION ===== */
 
 .edu-card{
 display:flex;
@@ -351,8 +336,6 @@ border:1px solid transparent;
 font-size:28px;
 color:#0ea5e9;
 }
-
-/* Hover Glow */
 
 .edu-card:hover{
 transform:translateY(-6px);
@@ -375,23 +358,17 @@ font-size:13px;
 color:#9ca3af;
 }
 
-/* ===== MORE ABOUT TEXT ===== */
-
 .more-desc{
 margin-top:20px;
 line-height:1.8;
 color:#4b5563;
 }
 
-/* Hover */
-
 .stat-box:hover{
 transform:translateY(-6px);
 border:1px solid #0ea5e9;
 box-shadow:0 15px 35px rgba(14,165,233,0.25);
 }
-
-/* ===== RESPONSIVE ===== */
 
 @media(max-width:900px){
 
@@ -403,10 +380,7 @@ gap:60px;
 .about-stats{
 justify-content:center;
 }
-
 }
-
-/* ===== SKILLS SECTION LAYOUT ===== */
 
 .skills-container{
 display:grid;
@@ -414,8 +388,6 @@ grid-template-columns:1fr 1fr;
 gap:80px;
 align-items:center;
 }
-
-/* ===== INTEREST CARDS ===== */
 
 .interest-list{
 display:grid;
@@ -436,15 +408,11 @@ transition:.3s;
 border:1px solid transparent;
 }
 
-/* Hover — Theme Glow */
-
 .interest-card:hover{
 transform:translateY(-6px);
 border:1px solid #0ea5e9;
 box-shadow:0 15px 35px rgba(14,165,233,0.25);
 }
-
-/* ===== SKILLS GRID ===== */
 
 .skills-grid{
 display:grid;
@@ -452,8 +420,6 @@ grid-template-columns:repeat(4,1fr);
 gap:20px;
 margin-top:30px;
 }
-
-/* ===== SKILL CARD ===== */
 
 .skill-card{
 background:rgba(255,255,255,0.6);
@@ -469,14 +435,10 @@ cursor:pointer;
 border:1px solid transparent;
 }
 
-/* ICON SIZE */
-
 .skill-card img{
 width:42px;
 height:42px;
 }
-
-/* Hover — Neon Theme Effect */
 
 .skill-card:hover{
 transform:translateY(-8px) scale(1.07);
@@ -485,8 +447,6 @@ box-shadow:
 0 15px 35px rgba(0,0,0,0.08),
 0 0 25px rgba(14,165,233,0.35);
 }
-
-/* ===== RESPONSIVE ===== */
 
 @media(max-width:900px){
 
@@ -549,29 +509,33 @@ font-size:14px;
 position:absolute;
 right:20px;
 bottom:20px;
-width:40px;
-height:40px;
+width:42px;
+height:42px;
 border-radius:50%;
-border:none;
-background:#0ea5e9;
+background:#111827;
 color:white;
-font-size:18px;
-cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+text-decoration:none;
+transition:.3s;
 }
 
-/* CONTACT SECTION — MATCH PROJECTS BACKGROUND */
+.circle-btn:hover{
+background:#0ea5e9;
+transform:scale(1.1);
+}
 
 .contact {
-  background: transparent; /* Same as projects */
+  background: transparent; 
   text-align: center;
 }
 
-/* Width control */
 .contact-container {
   max-width: 700px;
 }
 
-/* Description text */
 .contact-desc {
   font-size: 18px;
   line-height: 1.8;
@@ -579,7 +543,6 @@ cursor:pointer;
   margin: 25px 0 40px;
 }
 
-/* Mail Button */
 .mail-btn {
   display: inline-block;
   padding: 14px 28px;
@@ -591,14 +554,12 @@ cursor:pointer;
   transition: 0.3s ease;
 }
 
-/* Hover */
 .mail-btn:hover {
   background: #6366f1;
   color: white;
   box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
 }
 
-/* FOOTER */
 .footer{
 background:#fff;
 padding:80px;
