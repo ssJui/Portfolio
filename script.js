@@ -1,5 +1,3 @@
-// Navbar shadow on scroll
-
 window.addEventListener("scroll", () => {
   const nav = document.querySelector(".navbar");
   if (window.scrollY > 50) {
@@ -13,4 +11,11 @@ document.querySelectorAll(".circle").forEach(circle => {
   let percent = circle.getAttribute("data-percent");
   let degree = percent * 3.6;
   circle.style.background = `conic-gradient(#0ea5e9 ${degree}deg, #e5e7eb ${degree}deg)`;
+});
+
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.querySelector('header.navbar nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
 });
