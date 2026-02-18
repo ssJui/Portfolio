@@ -240,23 +240,45 @@ margin-right:10px;
 .ghost{
 border:1px solid #0ea5e9;
 background:transparent;
-padding:12px 22px;
+padding:9px 22px;
 border-radius:20px;
+text-decoration:none;   /* REMOVE UNDERLINE */
+color:#0ea5e9;          /* THEME COLOR */
+font-weight:500;
+display:inline-block;
+transition:.3s;
 }
 
-.social{
-    margin-top:30px;
-    display:flex;
-    align-items:center;
-    gap:15px;
+.ghost:hover{
+background:#0ea5e9;
+color:white;
 }
-.social i{
-    background:#fff;
-    padding:10px;
-    border-radius:50%;
-    cursor:pointer;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+.ghost a{
+  text-decoration: none;
+  color: inherit;   /* button er color use korbe */
 }
+
+.social a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.social a i{
+  background:#fff;
+  padding:10px;
+  border-radius:50%;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:.3s;
+}
+
+.social a i:hover{
+  transform:translateY(-3px);
+  background:#0ea5e9;
+  color:white;
+}
+
 /* SERVICES */
 .subtitle{
 text-align:center;
@@ -289,49 +311,194 @@ transition:.3s;
 transform:translateY(-6px);
 }
 
-/* CIRCLE SKILLS */
+/* ===== MORE ABOUT SECTION ===== */
 
-.circle-skills{
+.more-about-section{
+background:transparent; /* same as projects */
+}
+
+/* Layout */
+
+.more-about-container{
+display:grid;
+grid-template-columns: 1.3fr 0.7fr; /* left bigger */
+gap:80px;
+align-items:center;
+}
+
+
+/* ===== EDUCATION ===== */
+
+.edu-card{
 display:flex;
+gap:20px;
+align-items:center;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+padding:22px;
+border-radius:16px;
+margin-top:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:.3s;
+border:1px solid transparent;
+}
+
+.edu-card i{
+font-size:28px;
+color:#0ea5e9;
+}
+
+/* Hover Glow */
+
+.edu-card:hover{
+transform:translateY(-6px);
+border:1px solid #0ea5e9;
+box-shadow:0 15px 35px rgba(14,165,233,0.25);
+}
+
+.edu-card h3{
+font-size:18px;
+margin-bottom:4px;
+}
+
+.edu-card p{
+color:#6b7280;
+font-size:14px;
+}
+
+.edu-card span{
+font-size:13px;
+color:#9ca3af;
+}
+
+/* ===== MORE ABOUT TEXT ===== */
+
+.more-desc{
+margin-top:20px;
+line-height:1.8;
+color:#4b5563;
+}
+
+/* Hover */
+
+.stat-box:hover{
+transform:translateY(-6px);
+border:1px solid #0ea5e9;
+box-shadow:0 15px 35px rgba(14,165,233,0.25);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+.more-about-container{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.about-stats{
 justify-content:center;
-gap:90px;
-margin-top:50px;
-flex-wrap:wrap;
 }
 
-.circle-card{
-text-align:center;
 }
 
-.circle{
-width:130px;
-height:130px;
-border-radius:50%;
+/* ===== SKILLS SECTION LAYOUT ===== */
+
+.skills-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+/* ===== INTEREST CARDS ===== */
+
+.interest-list{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:30px;
+}
+
+.interest-card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+padding:18px 20px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+font-weight:500;
+color:#374151;
+transition:.3s;
+border:1px solid transparent;
+}
+
+/* Hover — Theme Glow */
+
+.interest-card:hover{
+transform:translateY(-6px);
+border:1px solid #0ea5e9;
+box-shadow:0 15px 35px rgba(14,165,233,0.25);
+}
+
+/* ===== SKILLS GRID ===== */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:30px;
+}
+
+/* ===== SKILL CARD ===== */
+
+.skill-card{
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(12px);
+border-radius:18px;
+padding:24px;
 display:flex;
 align-items:center;
 justify-content:center;
-position:relative;
-background:conic-gradient(#0ea5e9 0deg, #e5e7eb 0deg);
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:.35s ease;
+cursor:pointer;
+border:1px solid transparent;
 }
 
-.circle span{
-position:absolute;
-font-size:22px;
-font-weight:600;
+/* ICON SIZE */
+
+.skill-card img{
+width:42px;
+height:42px;
 }
 
-.circle::before{
-content:"";
-position:absolute;
-width:100px;
-height:100px;
-background:white;
-border-radius:50%;
+/* Hover — Neon Theme Effect */
+
+.skill-card:hover{
+transform:translateY(-8px) scale(1.07);
+border:1px solid #0ea5e9;
+box-shadow:
+0 15px 35px rgba(0,0,0,0.08),
+0 0 25px rgba(14,165,233,0.35);
 }
 
-.circle-card p{
-margin-top:15px;
-font-weight:500;
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+.skills-container{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.skills-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.interest-list{
+grid-template-columns:1fr;
+}
+
 }
 
 .project-grid{
@@ -408,12 +575,12 @@ cursor:pointer;
   margin: 25px 0 40px;
 }
 
-/* Mail button — same theme button */
+/* Mail Button */
 .mail-btn {
   display: inline-block;
-  padding: 14px 30px;
-  border: 2px solid #0ea5e9;
-  color: #0ea5e9;
+  padding: 14px 28px;
+  border: 2px solid #6366f1;
+  color: #6366f1;
   text-decoration: none;
   border-radius: 12px;
   font-weight: 500;
@@ -422,9 +589,9 @@ cursor:pointer;
 
 /* Hover */
 .mail-btn:hover {
-  background: #0ea5e9;
-  color: #fff;
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+  background: #6366f1;
+  color: white;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
 }
 
 /* FOOTER */
