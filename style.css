@@ -237,6 +237,10 @@ border-radius:20px;
 margin-right:10px;
 }
 
+.primary{
+text-decoration:none;
+}
+
 .ghost{
 border:1px solid #0ea5e9;
 background:transparent;
