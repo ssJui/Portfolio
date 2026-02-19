@@ -46,10 +46,6 @@ body {
   z-index: 10;
 }
 
-.menu-toggle {
-  margin-left: auto; /* pushes hamburger to the right */
-}
-
 .navbar nav a {
   margin-left: 30px;
   text-decoration: none;
@@ -291,26 +287,6 @@ body {
   margin-top: 10px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  font-size: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
 .more-about-section {
   background: transparent;
 }
@@ -366,23 +342,6 @@ body {
   margin-top: 20px;
   line-height: 1.8;
   color: #4b5563;
-}
-
-.stat-box:hover {
-  transform: translateY(-6px);
-  border: 1px solid #0ea5e9;
-  box-shadow: 0 15px 35px rgba(14, 165, 233, 0.25);
-}
-
-@media (max-width: 900px) {
-  .more-about-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .about-stats {
-    justify-content: center;
-  }
 }
 
 .skills-container {
@@ -449,21 +408,6 @@ body {
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.08),
     0 0 25px rgba(14, 165, 233, 0.35);
-}
-
-@media (max-width: 900px) {
-  .skills-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .interest-list {
-    grid-template-columns: 1fr;
-  }
 }
 
 .project-grid {
@@ -547,16 +491,16 @@ body {
 .mail-btn {
   display: inline-block;
   padding: 14px 28px;
-  border: 2px solid #6366f1;
-  color: #6366f1;
+  border: 2px solid #0ea5e9;
+  color: #0ea5e9;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 26px;
   font-weight: 500;
   transition: 0.3s ease;
 }
 
 .mail-btn:hover {
-  background: #6366f1;
+  background: #0ea5e9;
   color: white;
   box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
 }
@@ -585,24 +529,9 @@ img {
 
 .menu-toggle {
   display: none;
+  margin-left: auto; 
   font-size: 24px;
   cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar nav.active {
-    display: flex;
-  }
 }
 
 @media (max-width: 900px) {
@@ -651,6 +580,10 @@ img {
 }
 
 @media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -666,8 +599,6 @@ img {
   .navbar nav.active {
     display: flex; 
   }
-
-  @media (max-width: 600px) {
     
     .buttons {
       display: flex;
@@ -702,7 +633,6 @@ img {
       height: 32px;
       font-size: 16px;
     }
-  }
 
   .hero h1 {
     font-size: 26px;
